@@ -1,0 +1,30 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        print(f"Iteration #{i+1} {arr}")
+        for j in range(0, n - i - 1):
+            print(f"Items compared: [{arr[j]}, {arr[j+1]}]", end=" ")
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                print(f"➔ swapped {arr[j:j+2]}")
+            else:
+                print("➔ not swapped")
+    print("Output values =", arr)
+    return arr
+
+def tower_of_hanoi(n, source, auxiliary, target):
+    if n == 1:
+        print(f"Move disk 1 from {source} to {target}")
+        return
+    tower_of_hanoi(n - 1, source, target, auxiliary)
+    print(f"Move disk {n} from {source} to {target}")
+    tower_of_hanoi(n - 1, auxiliary, source, target)
+
+
+input_values = [5, 2, 6, 4, 1]
+print(f"Input values = {input_values}")
+
+sorted_values = bubble_sort(input_values)
+
+print(f"\nTower of Hanoi solution for {len(sorted_values)} disks:")
+tower_of_hanoi(len(sorted_values), 'A', 'B', 'C')
