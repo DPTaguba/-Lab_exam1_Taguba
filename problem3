@@ -1,0 +1,27 @@
+#problem3
+num = int(input("PLEASE ENTER YOUR MOBILE NUMBER: "))
+def network(cell_number):
+    network_num = {
+    "Smart" : ["13", "14","20","21", "28", "29", "30"],
+    "Tnt"   : ["09", "10", "11", "12", "18", "19"],
+    "Sun"   : ["22", "23", "32", "33"],
+    "Globe" : ["15", "16", "17", "25", "26", "27"],
+    "TM"    : ["03", "04", "05", "06", "07"],
+    "Red"   : ["01", "02", "24"],
+    "Dito"  : ["91", "92", "93", "94", "95", "96", "97", "98"],
+}
+
+if len(num != 12):
+    print("INVALID MOBILE NUMBER")
+
+elif num.starswitch !="09":
+    print("Your mobile is not compatible in your region(philippines)!")
+
+else:
+    prefix = num[:4]
+   if prefix in["0913", "0914","0920","0921", "0928", "0929", "0930"]:
+       print("Your network is smart")
+       if prefix in ["0909", "0910", "0911", "0912", "0918", "0919"]:
+           print("Your network is tnt")
+           if prefix in ["0909", "0910", "0911", "0912", "0918", "0919"]:
+               print("Your network is tnt")
